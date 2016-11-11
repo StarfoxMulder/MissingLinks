@@ -1,0 +1,20 @@
+-- Create and checkout a branch
+
+git checkout -b <BranchName>
+
+////
+This creates a new local branch for you to work on.
+\\\\
+
+
+-- To push the new local version of the branch to github
+
+git push -u origin <BranchName>
+
+////
+This creates an 'upstream' version of your local branch within Github.
+You only have to do the '-u origin <BranchName> the first time you push
+with this new branch.  After that, Github will default to pushing your changes
+to the branch you're connected with in Github.
+\\\\
+
