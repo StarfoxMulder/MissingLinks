@@ -10,4 +10,4 @@ Likewise we will have a landiing page, a page to search for items, a page to add
 
 Potential New Technology will be PayPal for processing paymebts.
 
-Public dataset: Still reserching but want to find something to use to display articles (or a link) about waste and recycling.
+Public dataset: Still researching but want to find something to use to display articles (or a link) about waste and recycling.
