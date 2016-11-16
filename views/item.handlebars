@@ -28,67 +28,68 @@
       </ul>
   </div>
 
-<main id="page-content-wrapper">
-  <div class="container-fluid">
-    <header>
-      <p><span style="font-size: 85px">M</span>ISSING <span style="font-size: 85px">L</span>INKS</p>
-      <p id="undLine"><span style="font-size: 85px">____________________________</span></p>
-    </header>
+  <main id="page-content-wrapper">
+    <div class="container-fluid">
+      <header>
+        <p><span style="font-size: 85px">M</span>ISSING <span style="font-size: 85px">L</span>INKS</p>
+        <p id="undLine"><span style="font-size: 85px">____________________________</span></p>
+      </header>
 
-    <div class="row">
+      <div class="row">
 
-      <div class="col-xs-4" id="picCol">
-        <div class="row">
-          <div class="col-xs-10 offset-xs-1">
-            {{this.mainPic}}
+        <div class="col-xs-4" id="picCol">
+          <div class="row">
+            <div class="col-xs-10 offset-xs-1">
+              {{this.mainPic}}
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-2 offset-xs-2">
-            {{this.pic2}}
+          <div class="row">
+            <div class="col-xs-2 offset-xs-2">
+              {{this.pic2}}
+            </div>
+            <div class="col-xs-2 offset-xs-1">
+              {{this.pic3}}
+            </div>
+            <div class="col-xs-2 offset-xs-1">
+              {{this.pic4}}
+            </div>
           </div>
-          <div class="col-xs-2 offset-xs-1">
-            {{this.pic3}}
+        </div> <!-- end picCol -->
+
+        <div class="col-xs-8" id="infoCol">
+          <div class="row">
+            <div class="jumbotron">
+              <h2 id="itemNameH"> {{this.itemName}} </h2>
+              <h3 id="posterNameH"> {{this.posterName}} </h3>
+              <p class="lead" id="longDescriptionP"> {{this.longDescription}} </p>
+              <p class="lead">
+                <a class="btn btn-primary btn-lg" href="#" role="button">Purchase</a>
+              </p>
+              <hr class="my-2">
+            </div>
           </div>
-          <div class="col-xs-2 offset-xs-1">
-            {{this.pic4}}
-          </div>
-        </div>
-      </div> <!-- end picCol -->
 
-      <div class="col-xs-8" id="infoCol">
-        <div class="row">
-          <div class="jumbotron">
-            <h2 id="itemNameH"> {{this.itemName}} </h2>
-            <h3 id="posterNameH"> {{this.posterName}} </h3>
-            <p class="lead" id="longDescriptionP"> {{this.longDescription}} </p>
-            <p class="lead">
-              <a class="btn btn-primary btn-lg" href="#" role="button">Purchase</a>
-            </p>
-            <hr class="my-2">
-          </div>
-        </div>
+  {{!--   <div class="row">
+            <div class="col-xs-10 offset-xs-1">
+              <ul>
+                {{#each comment}}
+                  <li>
+                    <h3 id="posterNameH"> {{this.commentPoster}} </h3>
+                    <hr style="color:gray">
+                    <h4> {{this.commentText}} </h4>
+                  </li>
+                {{/each}}
+              </ul>
+            </div>
+          </div>   ///// This section would populate the comments section if we want it --}}
 
-{{!--   <div class="row">
-          <div class="col-xs-10 offset-xs-1">
-            <ul>
-              {{#each comment}}
-                <li>
-                  <h3 id="posterNameH"> {{this.commentPoster}} </h3>
-                  <hr style="color:gray">
-                  <h4> {{this.commentText}} </h4>
-                </li>
-              {{/each}}
-            </ul>
-          </div>
-        </div>   ///// This section would populate the comments section if we want it --}}
+        </div> <!-- end infoCol -->
 
-      </div> <!-- end infoCol -->
+      </div> <!-- end main container row -->
 
-    </div> <!-- end main container row -->
-
-  </div>
-</main>
+    </div>
+  </main>
+</div>
 
 
 {{!-- <div class="col-xs-10 offset-xs-1">

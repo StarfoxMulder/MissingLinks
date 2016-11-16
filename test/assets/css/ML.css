@@ -24,7 +24,7 @@ body {
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    background: #000;
+    background-color: #87FFB9;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -33,6 +33,7 @@ body {
 
 #wrapper.toggled #sidebar-wrapper {
     width: 250px;
+    background-color: #87FFB9;
 }
 
 #page-content-wrapper {
@@ -55,6 +56,7 @@ body {
     margin: 0;
     padding: 0;
     list-style: none;
+    background-color: #87FFB9;
 }
 
 .sidebar-nav li {
@@ -63,15 +65,18 @@ body {
 }
 
 .sidebar-nav li a {
+    font-family: 'Yantramanav', sans-serif;
+    font-size: 18px;
     display: block;
     text-decoration: none;
-    color: #999999;
+    color: #fff;
+
 }
 
 .sidebar-nav li a:hover {
     text-decoration: none;
-    color: #fff;
-    background: rgba(255,255,255,0.2);
+    color: #D3FFE6;
+    background: #6CCC94;
 }
 
 .sidebar-nav li a:active,
@@ -81,17 +86,27 @@ body {
 
 .sidebar-nav > .sidebar-brand {
     height: 65px;
-    font-size: 18px;
+    font-size: 25px;
     line-height: 60px;
 }
 
 .sidebar-nav > .sidebar-brand a {
-    color: #999999;
+    color: #fff;
+    font-family: 'Courgette', cursive;
 }
 
 .sidebar-nav > .sidebar-brand a:hover {
-    color: #fff;
+    color: #6CCC94;
     background: none;
+}
+
+header {
+    font-family: 'Courgette', cursive;
+    font-size: 75px;
+}
+
+#undLine {
+    height: 20px;
 }
 
 
@@ -109,17 +124,18 @@ body {
 }
 
 #mainPicDiv {
-
+    border: solid 2px #87FFB9;
+    border-radius: 15px;
+    height: 180px;
+    width: 180px;
 }
 
 #pic2Div, #pic3Div, #pic4Div {
     border: solid 2px #87FFB9;
     border-radius: 15px;
-    height: 50px;
-    width: 50px;
+    height: 80px;
+    width: 80px;
 }
-
-
 
 
 /*  Media Queries  */
