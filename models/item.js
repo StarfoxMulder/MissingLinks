@@ -6,8 +6,6 @@ module.exports = function(sequelize, DataTypes) {
       autoIncrement: true,
       primaryKey: true
     },
-    burger_name: DataTypes.STRING,
-
     price: DataTypes.INTEGER,
     mainPic: DataType.LONGTEXT, 
     pic2: DataType.LONGTEXT, 
