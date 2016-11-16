@@ -40,6 +40,12 @@ body {
     width: 100%;
     position: absolute;
     padding: 15px;
+    padding-right: 45px;
+    background-image: url('../img/natBack1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#subHeader {
 }
 
 #wrapper.toggled #page-content-wrapper {
@@ -102,7 +108,12 @@ body {
 
 header {
     font-family: 'Courgette', cursive;
-    font-size: 75px;
+    font-size: 85px;
+    background-color: #fff;
+    padding-left: 15%;
+    border-radius: 10px;
+    opacity: 0.7;
+    margin-bottom: 5%;
 }
 
 #undLine {
@@ -111,16 +122,28 @@ header {
 
 
 /*  Item Page Styling  */
+#jumbo {
+    margin-right: 15%;
+    background-color: #D3FFE6;
+    font-family: 'Yantramanav', sans-serif;
+}
+
+#itemNameH, #posterNameH, #longDescriptionP {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2%;
+}
 #itemNameH {
 
 }
 
 #posterNameH {
-
+    margin-top: 3%;
+    margin-bottom: 3%;
 }
 
 #longDescriptionP {
-
+    margin-bottom: 3%;
 }
 
 #mainPicDiv {
@@ -130,11 +153,22 @@ header {
     width: 180px;
 }
 
+#pic3Div {
+    margin-left: 4%;
+    margin-right: 4%;
+}
 #pic2Div, #pic3Div, #pic4Div {
     border: solid 2px #87FFB9;
     border-radius: 15px;
     height: 80px;
     width: 80px;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+#purchase {
+    margin: auto;
+    background-color: #58CCCA;
 }
 
 
