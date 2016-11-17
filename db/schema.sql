@@ -1,15 +1,16 @@
-CREATE DATABASE project2_db;
+###schema
+CREATE DATABASE IF NOT EXISTS project2_db;
 
 USE project2_db;
 
-CREATE TABLE items
+CREATE TABLE available
 (
 	id int NOT NULL AUTO_INCREMENT,
 	price int NOT NULL,
-	mainPic LONGTEXT NOT NULL, 
-	pic2 LONGTEXT,
-	pic3 LONGTEXT,
-	pic4 LONGTEXT,
+	mainPic LONGBLOB NOT NULL, 
+	pic2 LONGBLOB,
+	pic3 LONGBLOB,
+	pic4 LONGBLOB,
 	itemName varchar(500) NOT NULL,
 	posterName varchar(20) NOT NULL,
 	longDescription TEXT,
@@ -18,3 +19,22 @@ CREATE TABLE items
 	datePosted timestamp NOT NULL,
 	PRIMARY KEY (id)
 );
+
+CREATE TABLE wanted
+(
+	id int NOT NULL AUTO_INCREMENT,
+	price int NOT NULL,
+	mainPic LONGBLOB NOT NULL, 
+	pic2 LONGBLOB,
+	pic3 LONGBLOB,
+	pic4 LONGBLOB,
+	itemName varchar(500) NOT NULL,
+	posterName varchar(20) NOT NULL,
+	longDescription TEXT,
+	shortDescription TINYTEXT,
+	found BOOLEAN,
+	datePosted timestamp NOT NULL,
+	PRIMARY KEY (id)
+);
+
+

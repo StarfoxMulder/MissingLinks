@@ -41,8 +41,8 @@ body {
     position: absolute;
     padding: 15px;
     padding-right: 45px;
-    background-image: url('../img/natBack1.jpg');
-    /* background-image: url('../img/ray_troll.jpg'); */
+  /*  background-image: url('../img/natBack1.jpg'); */
+    background-image: url('../img/ray_troll.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -76,7 +76,7 @@ body {
     font-size: 18px;
     display: block;
     text-decoration: none;
-    color: #fff;
+    color: #000000;
 
 }
 
@@ -98,7 +98,7 @@ body {
 }
 
 .sidebar-nav > .sidebar-brand a {
-    color: #fff;
+    color: #000000;
     font-family: 'Courgette', cursive;
 }
 
