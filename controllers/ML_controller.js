@@ -29,9 +29,9 @@ router.post('/post/insertOne', function (req, res) {
     posterName: req.body.posterName,
     longDescription: req.body.longDescription,
     shortDescription: req.body.shortDescription
-    // mainPic: /*UPDATE W/MULTER PARAMS*/, 
-    // pic2: /*UPDATE W/MULTER PARAMS*/, 
-    // pic3: /*UPDATE W/MULTER PARAMS*/, 
+    // mainPic: /*UPDATE W/MULTER PARAMS*/,
+    // pic2: /*UPDATE W/MULTER PARAMS*/,
+    // pic3: /*UPDATE W/MULTER PARAMS*/,
     // pic4: /*UPDATE W/MULTER PARAMS*/,
   })
   .then(function() {
@@ -66,8 +66,8 @@ router.put('/item/updateSold/:id', function (req, res) {
     }
   }).then(function () {
     res.redirect('/list');
-    //Do we want an intermediary validation page here so users 
-    // know that their purchase was successful? 
+    //Do we want an intermediary validation page here so users
+    // know that their purchase was successful?
     // Or another type of validation?
   });
 });
@@ -89,5 +89,5 @@ router.put('/item/updateSold/:id', function (req, res) {
 //   });
 // });
 
-  
+
 module.exports = router;

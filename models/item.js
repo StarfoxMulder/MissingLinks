@@ -7,16 +7,16 @@ module.exports = function(sequelize, DataTypes) {
       primaryKey: true
     },
     price: DataTypes.INTEGER,
-    mainPic: DataType.LONGTEXT, 
-    pic2: DataType.LONGTEXT, 
-    pic3: DataType.LONGTEXT, 
-    pic4: DataType.LONGTEXT, 
+    mainPic: DataType.LONGTEXT,
+    pic2: DataType.LONGTEXT,
+    pic3: DataType.LONGTEXT,
+    pic4: DataType.LONGTEXT,
     itemName: DataTypes.STRING,
     posterName: DataTypes.STRING,
     longDescription: DataType.TEXT,
     shortDescription: DataType.TINYTEXT,
     sold: {
-      type: DataTypes.BOOLEAN, 
+      type: DataTypes.BOOLEAN,
       defaultValue: false
     },
     datePosted: DataTypes.TIMESTAMP
