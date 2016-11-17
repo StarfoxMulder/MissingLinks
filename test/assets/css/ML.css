@@ -24,7 +24,7 @@ body {
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    background-color: #87FFB9;
+    background-color: #D3FFE6;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -33,7 +33,7 @@ body {
 
 #wrapper.toggled #sidebar-wrapper {
     width: 250px;
-    background-color: #87FFB9;
+    background-color: #D3FFE6;
 }
 
 #page-content-wrapper {
@@ -62,7 +62,7 @@ body {
     margin: 0;
     padding: 0;
     list-style: none;
-    background-color: #87FFB9;
+    background-color: #D3FFE6;
 }
 
 .sidebar-nav li {
@@ -75,7 +75,7 @@ body {
     font-size: 18px;
     display: block;
     text-decoration: none;
-    color: #fff;
+    color: #697F73;
 
 }
 
@@ -97,7 +97,7 @@ body {
 }
 
 .sidebar-nav > .sidebar-brand a {
-    color: #fff;
+    color: #697F73;
     font-family: 'Courgette', cursive;
 }
 
@@ -108,12 +108,13 @@ body {
 
 header {
     font-family: 'Courgette', cursive;
-    font-size: 85px;
+    font-size: 80px;
     background-color: #fff;
-    padding-left: 15%;
+    padding-left: 12%;
     border-radius: 10px;
     opacity: 0.7;
     margin-bottom: 5%;
+    letter-spacing: 3px;
 }
 
 #undLine {
@@ -147,10 +148,14 @@ header {
 }
 
 #mainPicDiv {
-    border: solid 2px #87FFB9;
+    border: solid 2px #D3FFE6;
     border-radius: 15px;
     height: 180px;
     width: 180px;
+    margin-left: 15%;
+}
+#pic2Div {
+    margin-left: 15%;
 }
 
 #pic3Div {
@@ -158,7 +163,7 @@ header {
     margin-right: 4%;
 }
 #pic2Div, #pic3Div, #pic4Div {
-    border: solid 2px #87FFB9;
+    border: solid 2px #D3FFE6;
     border-radius: 15px;
     height: 80px;
     width: 80px;
@@ -166,8 +171,10 @@ header {
     margin-bottom: 4%;
 }
 
+#price {
+    margin-left: 5%;
+}
 #purchase {
-    margin: auto;
     background-color: #58CCCA;
 }
 
