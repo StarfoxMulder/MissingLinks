@@ -18,6 +18,25 @@ with this new branch.  After that, Github will default to pushing your changes
 to the branch you're connected with in Github.
 \\\\
 
+-- To pull the branch into local master branch, be in Master
+
+git merge <branchName>
+[[ reconcile conflicts within local master ]]
+git add -A
+git commit -m ""
+git push origin master
+
+-- To bring the most recent version of the master into the local version of your personal branch
+
+git checkout <branchName>
+git merge master
+[[ reconcile conflicts wihtin local <branchName> ]]
+[[ do your work on this up-to-date version of <branchName> | when you want to push your local version of <branchName> to your remote version of <branchName> continue with the following ]]
+git add -A
+git commit -m ""
+git push
+
+
 CJP todo before push on itemPage:
 - split insertOne into available and wanted in orm
 - create toggle option on posting page to alter which route the request is directed to (post/available or post/wanted depending on if the item being posted is for an available or wanted item)
