@@ -1,41 +1,79 @@
 var express = require('express');
 var router = express.Router();
 var burger = require('../models/burger.js');
+var connection = require('../config/connection.js');
+var models = require('../models');
 var multer = require('multer');
 
 ///// Route to Landing Page \\\\\
 router.get('/', function (req, res) {
   res.redirect('/landing');
+  //need a landing.handebars
 });
 
 
-///// Route to Listing Page \\\\\
-router.get('/list', function (req, res) {
-  item.findAll()
-  .then(function(res) {
-    res.render('list', { items : res});
-    //need a landing.handebars
-    //this returns all items - does not differentiate
-    // based on search criteria, date, or # of results per page
+///// Route to Available Items List Page \\\\\
+router.get('/listA', function (req, res) {
+  models.available.findAll({})
+  .then(function(data) {
+    res.render('listA', { available : data});
+    //this returns all available items
+    // need model for available items
+  });
+});
+
+///// Route to Wanted Items List Page \\\\\
+router.get('/listW', function (req, res) {
+  models.wanted.findAll({})
+  .then(function(data) {
+    res.render('listW', { wanted : data});
+    //this returns all wanted items
+    // need model for wanted items
   });
 });
 
 
-///// Route from /post to /list \\\\\
-router.post('/post/insertOne', function (req, res) {
-  item.create({
+///// Route from /post/insertOne to /list \\\\\
+router.post('/post/available', function (req, res){
+
+  models.available.create({
     price: req.body.price,
     itemName: req.body.itemName,
     posterName: req.body.posterName,
     longDescription: req.body.longDescription,
-    shortDescription: req.body.shortDescription
-    // mainPic: /*UPDATE W/MULTER PARAMS*/, 
-    // pic2: /*UPDATE W/MULTER PARAMS*/, 
-    // pic3: /*UPDATE W/MULTER PARAMS*/, 
+    shortDescription: req.body.shortDescription,
+    sold: false
+    // mainPic: /*UPDATE W/MULTER PARAMS*/,
+    // pic2: /*UPDATE W/MULTER PARAMS*/,
+    // pic3: /*UPDATE W/MULTER PARAMS*/,
     // pic4: /*UPDATE W/MULTER PARAMS*/,
   })
   .then(function() {
-    res.redirect('/list');
+    res.redirect('/listA');
+    //Should we do some kind of 'post successful' redirect here
+    // as an intermediary page between /post and redirect back to /list?
+    // Or do another form of validation?
+  });
+
+});
+
+///// Route from /post/wanted to /list \\\\\
+router.post('/post/wanted', function (req, res){
+
+  models.wanted.create({
+    price: req.body.price,
+    itemName: req.body.itemName,
+    posterName: req.body.posterName,
+    longDescription: req.body.longDescription,
+    shortDescription: req.body.shortDescription,
+    found: false
+    // mainPic: /*UPDATE W/MULTER PARAMS*/,
+    // pic2: /*UPDATE W/MULTER PARAMS*/,
+    // pic3: /*UPDATE W/MULTER PARAMS*/,
+    // pic4: /*UPDATE W/MULTER PARAMS*/,
+  })
+  .then(function() {
+    res.redirect('/listW');
     //Should we do some kind of 'post successful' redirect here
     // as an intermediary page between /post and redirect back to /list?
     // Or do another form of validation?
@@ -44,20 +82,24 @@ router.post('/post/insertOne', function (req, res) {
 });
 
 
-///// router for getting info of a specific item for Item Page \\\\\
-router.get('/item/:id', function(req, res) {
-  var condition = 'id = '+req.params.id;
+///// router for getting info of a specific Available Item for ItemA Page \\\\\
+router.get('/itemA/:id', function(req, res) {
+  var id = req.params.id;
+  var condition = 'id = '+id;
 
-  item.
+  models.available.findById(id)
+  .then(function(data){
+    res.render('itemA', {available : data});
+  });
 
 });
 
 
 ///// route from item page to update 'sold' field when purchased \\\\\
-router.put('/item/updateSold/:id', function (req, res) {
+router.put('/itemA/sold/:id', function (req, res) {
   var condition = 'id = ' + req.params.id;
 
-  item.updateSold({
+  models.available.updateSold({
     sold: true
   },
   {
@@ -65,14 +107,44 @@ router.put('/item/updateSold/:id', function (req, res) {
       id:condition
     }
   }).then(function () {
-    res.redirect('/list');
-    //Do we want an intermediary validation page here so users 
-    // know that their purchase was successful? 
+    res.redirect('/listA');
+    //Do we want an intermediary validation page here so users
+    // know that their purchase was successful?
     // Or another type of validation?
   });
 });
 
-/////
+///// router for getting info of a specific Wanted Item for ItemW Page \\\\\
+router.get('/itemW/:id', function(req, res) {
+  var id = req.params.id;
+  var condition = 'id = '+id;
+
+  models.wanted.findById(id)
+  .then(function(data){
+    res.render('itemW', {wanted : data});
+  });
+
+});
+
+
+///// route from item page to update 'found' field when an item is found - i think in theory this would lead to connecting the two users so they can coordinate on how to complete the transaction independently \\\\\
+router.put('/itemW/found/:id', function (req, res) {
+  var condition = 'id = ' + req.params.id;
+
+  models.wanted.updateFound({
+    found: true
+  },
+  {
+    where: {
+      id:condition
+    }
+  }).then(function () {
+    res.redirect('/listW');
+    //Do we want an intermediary validation page here so users
+    // know that their purchase was successful?
+    // Or another type of validation?
+  });
+});
 
 
 ///// in case we need a delete/remove item option \\\\\
@@ -89,5 +161,5 @@ router.put('/item/updateSold/:id', function (req, res) {
 //   });
 // });
 
-  
+
 module.exports = router;
