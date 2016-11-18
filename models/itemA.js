@@ -1,16 +1,16 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
-  var itemA = sequelize.define('item', {
+  var itemA = sequelize.define('itemA', {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
       primaryKey: true
     },
     price: DataTypes.INTEGER,
-    mainPic: DataType.LONGTEXT,
-    pic2: DataType.LONGTEXT,
-    pic3: DataType.LONGTEXT,
-    pic4: DataType.LONGTEXT,
+    mainPic: DataType.LONGBLOB,
+    pic2: DataType.LONGBLOB,
+    pic3: DataType.LONGBLOB,
+    pic4: DataType.LONGBLOB,
     itemName: DataTypes.STRING,
     posterName: DataTypes.STRING,
     longDescription: DataType.TEXT,
@@ -27,5 +27,5 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
-  return item;
+  return itemA;
 };
