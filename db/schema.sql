@@ -13,8 +13,8 @@ CREATE TABLE available
 	pic4 LONGBLOB,
 	itemName varchar(500) NOT NULL,
 	posterName varchar(20) NOT NULL,
+	posterContactNumber varchar(12) NOT NULL,
 	longDescription TEXT,
-	shortDescription TINYTEXT,
 	sold BOOLEAN,
 	datePosted timestamp NOT NULL,
 	PRIMARY KEY (id)
@@ -23,18 +23,16 @@ CREATE TABLE available
 CREATE TABLE wanted
 (
 	id int NOT NULL AUTO_INCREMENT,
-	price int NOT NULL,
 	mainPic LONGBLOB NOT NULL, 
 	pic2 LONGBLOB,
 	pic3 LONGBLOB,
 	pic4 LONGBLOB,
 	itemName varchar(500) NOT NULL,
 	posterName varchar(20) NOT NULL,
+	posterContactNumber varchar(12) NOT NULL,
 	longDescription TEXT,
-	shortDescription TINYTEXT,
 	found BOOLEAN,
 	datePosted timestamp NOT NULL,
 	PRIMARY KEY (id)
 );
-
 
