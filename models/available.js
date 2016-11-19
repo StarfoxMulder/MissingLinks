@@ -1,6 +1,7 @@
 'use strict';
+
 module.exports = function(sequelize, DataTypes) {
-  var itemW = sequelize.define('itemW', {
+  var available = sequelize.define('available', {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
@@ -15,7 +16,7 @@ module.exports = function(sequelize, DataTypes) {
     posterName: DataTypes.STRING,
     longDescription: DataTypes.TEXT,
     shortDescription: DataTypes.TINYTEXT,
-    found: {
+    sold: {
       type: DataTypes.BOOLEAN,
       defaultValue: false
     },
@@ -27,5 +28,5 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
-  return itemW;
+  return available;
 };

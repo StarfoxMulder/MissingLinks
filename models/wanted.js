@@ -1,6 +1,6 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
-  var itemW = sequelize.define('itemW', {
+  var wanted = sequelize.define('wanted', {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
@@ -27,5 +27,5 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
-  return itemW;
+  return wanted;
 };

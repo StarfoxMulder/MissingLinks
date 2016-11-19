@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var connection = require('../config/connection.js');
 var models = require('../models');
 var multer = require('multer');
 
@@ -10,28 +9,32 @@ router.get('/', function (req, res) {
   //need a landing.handebars
 });
 
+router.get('/landing', function (req, res) {
+  res.render('landing');
+});
+
 
 ///// Route to Available Items List Page \\\\\
 router.get('/listA', function (req, res) {
-  models.available.findAll({})
-  .then(function(data) {
-    res.render('listA', { available : data});
+  models.available.findAll({}).then(function(data) {
+    res.render('listA', { available : data });
     //this returns all available items
-    // need model for available items
+    // need models for available items
   });
 });
 
 ///// Route to Wanted Items List Page \\\\\
 router.get('/listW', function (req, res) {
-  models.wanted.findAll({})
-  .then(function(data) {
-    res.render('listW', { wanted : data});
+  models.wanted.findAll({}).then(function(data) {
+    res.render('listW', { wanted : data });
     //this returns all wanted items
-    // need model for wanted items
+    // need models for wanted items
   });
 });
 
-
+router.get('/post', function(req, res){
+  res.render("post");
+});
 ///// Route from /post/insertOne to /list \\\\\
 router.post('/post/available', function (req, res){
 
@@ -46,8 +49,7 @@ router.post('/post/available', function (req, res){
     // pic2: /*UPDATE W/MULTER PARAMS*/,
     // pic3: /*UPDATE W/MULTER PARAMS*/,
     // pic4: /*UPDATE W/MULTER PARAMS*/,
-  })
-  .then(function() {
+  }).then(function() {
     res.redirect('/listA');
     //Should we do some kind of 'post successful' redirect here
     // as an intermediary page between /post and redirect back to /list?
@@ -145,6 +147,7 @@ router.put('/itemW/found/:id', function (req, res) {
   });
 });
 
+module.exports = router;
 
 ///// in case we need a delete/remove item option \\\\\
 // router.delete('/item/deleteOne/:id', function (req, res) {
@@ -160,5 +163,3 @@ router.put('/itemW/found/:id', function (req, res) {
 //   });
 // });
 
-
-module.exports = router;

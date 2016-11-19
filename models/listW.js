@@ -7,10 +7,10 @@ module.exports = function(sequelize, DataTypes) {
       primaryKey: true
     },
     price: DataTypes.INTEGER,
-    mainPic: DataType.LONGBLOB,
+    mainPic: DataTypes.LONGTEXT,
     itemName: DataTypes.STRING,
     posterName: DataTypes.STRING,
-    shortDescription: DataType.TINYTEXT,
+    shortDescription: DataTypes.TINYTEXT,
     found: {
       type: DataTypes.BOOLEAN,
       defaultValue: false
