@@ -43,5 +43,30 @@ CJP todo before push on itemPage:
 - make new models for available and wanted instead of single item model
 - be mindful not to alter anythign related to the 'individual item page' when splitting out the post/pull of items into available and wanted
 - need to make separate listA and listW pages for listing out available and wanted items
-- need to maek seaparate itemA and itemW pages due to split of everything else into these categories (seems weird, but trust me, it's necessary in order to target the desired item between the two tables)
+- need to make seaparate itemA and itemW pages due to split of everything else into these categories (seems weird, but trust me, it's necessary in order to target the desired item between the two tables)
 - make sure models/model are all in there appropriately (they should all be models since we have mutiple within that folder)
+
+- Review express, briefly (13.2, 13.3, 14.1)
+- Review Handlebars + MySQL (14.2)
+- Review MVC (14.3)
+- Review Sequelize (15.2) {{ docs.sequelizejs.com ;
+Sequelize Queries, }}
+
+{{ Ask Christie about the 'heroku run bash' command? }}
+
+
+--  Notes from speaker, Lester Bostic  --
+  Networking Groups:
+Innovation Enterprise
+Association of IT Professionals
+information Architecture Institute
+Data Analystics Association
+IEEE Computer Society
+Grace Hopper
+Great Minds in STEM
+TISQA
+Wall Street Technology Association
+(NC?) Technology Council
+Association for Computing Machinery
+
+
