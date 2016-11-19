@@ -1,6 +1,6 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
-  var itemW = sequelize.define('itemW', {
+  var listW = sequelize.define('listW', {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
@@ -8,12 +8,8 @@ module.exports = function(sequelize, DataTypes) {
     },
     price: DataTypes.INTEGER,
     mainPic: DataTypes.LONGTEXT,
-    pic2: DataTypes.LONGTEXT,
-    pic3: DataTypes.LONGTEXT,
-    pic4: DataTypes.LONGTEXT,
     itemName: DataTypes.STRING,
     posterName: DataTypes.STRING,
-    longDescription: DataTypes.TEXT,
     shortDescription: DataTypes.TINYTEXT,
     found: {
       type: DataTypes.BOOLEAN,
@@ -27,5 +23,11 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
-  return itemW;
+  return listW;
 };
+
+
+    // pic2: DataType.LONGBLOB,
+    // pic3: DataType.LONGBLOB,
+    // pic4: DataType.LONGBLOB,
+    // longDescription: DataType.TEXT,
