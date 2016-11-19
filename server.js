@@ -2,7 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var multer = require('multer');
-var models = require('./models');
+var models = require('/models');
 
 var app = express();
 var upload = multer();
