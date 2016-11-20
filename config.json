@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "database": "project2_db",
+    "password": "moxnix123",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "moxnix123",
+    "database": "project2_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "moxnix123",
+    "database": "project2_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
