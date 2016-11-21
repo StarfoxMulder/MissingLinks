@@ -45,7 +45,7 @@ CJP todo before push on itemPage:
 - need to make separate listA and listW pages for listing out available and wanted items
 - need to make seaparate itemA and itemW pages due to split of everything else into these categories (seems weird, but trust me, it's necessary in order to target the desired item between the two tables)
 - make sure models/model are all in there appropriately (they should all be models since we have mutiple within that folder)
-- use node.js 'require fs' for greading datatype and storing it approapretly in db table
+- use node.js 'require fs' for reading datatype and storing it approapretly in db table
 
 -- get jawsdb working
 -- using sequelize to create (1) models and (2)migrations based on the sql files
