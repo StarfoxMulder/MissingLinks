@@ -1,5 +1,4 @@
-sequelize model:create --name=Item --attributes "Type:string,Content:string,EventDate:Date"
-sequelize model:create --name=Volunteer --attributes "Name:string,Event:string,Phone:string"
-sequelize model:create --name=Mealsonwheel --attributes "Family:string,Driver:string,route:string,day:string"
+sequelize model:create --name=available --attributes "price:INT,mainPic:LONGBLOB NOT NULL,pic2:LONGBLOB,pic3:LONGBLOB,pic4:LONGBLOB,itemName:varchar(500) NOT NULL,posterName:varchar(20) NOT NULL,posterContactNumber:varchar(12) NOT NULL,longDescription:TEXT,shortDescription:TEXT"
+sequelize model:create --name=wanted --attributes "mainPic:LONGBLOB NOT NULL,pic2:LONGBLOB,pic3:LONGBLOB,pic4:LONGBLOB,itemName:varchar(500) NOT NULL,posterName:varchar(20) NOT NULL,posterContactNumber:varchar(12) NOT NULL,longDescription:TEXT,shortDescription:TEXT"
 node sync.js
-node insert.js
+# node insert.js

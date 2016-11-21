@@ -50,7 +50,7 @@ CJP todo before push on itemPage:
 -- get jawsdb working
 -- using sequelize to create (1) models and (2)migrations based on the sql files
 -- drop the existing db/table / delete ''
--- sequelize model create  "name" --attributes "mainPic:"
+-- sequelize model:create  "name" --attributes "mainPic:"
 -- sequelize db migrate
 -- sequelzie db seed
 

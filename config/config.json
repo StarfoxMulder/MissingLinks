@@ -1,16 +1,16 @@
 {
   "development": {
     "username": "root",
-    "password": "Null",
+    "password": "Fthefed22",
     "database": "project2_db",
-    "host": "localhost",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "null",
+    "password": "Fthefed22",
     "database": "project2_db",
-    "host": "localhost",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
