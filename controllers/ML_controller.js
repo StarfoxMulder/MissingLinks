@@ -16,19 +16,19 @@ router.get('/landing', function (req, res) {
 
 ///// Route to Available Items List Page \\\\\
 router.get('/listA', function (req, res) {
-  models.available.findAll({}).then(function(data) {
-    res.render('listA', { available : data });
-    //this returns all available items
-    // need models for available items
+  models.Available.findAll({}).then(function(data) {
+    res.render('listA', { Available : data });
+    //this returns all Available items
+    // need models for Available items
   });
 });
 
 ///// Route to Wanted Items List Page \\\\\
 router.get('/listW', function (req, res) {
-  models.wanted.findAll({}).then(function(data) {
-    res.render('listW', { wanted : data });
-    //this returns all wanted items
-    // need models for wanted items
+  models.Wanted.findAll({}).then(function(data) {
+    res.render('listW', { Wanted : data });
+    //this returns all Wanted items
+    // need models for Wanted items
   });
 });
 
@@ -36,9 +36,9 @@ router.get('/post', function(req, res){
   res.render("post");
 });
 ///// Route from /post/insertOne to /list \\\\\
-router.post('/post/available', function (req, res){
+router.post('/post/Available', function (req, res){
 
-  models.available.create({
+  models.Available.create({
     price: req.body.price,
     itemName: req.body.itemName,
     posterName: req.body.posterName,
@@ -58,10 +58,10 @@ router.post('/post/available', function (req, res){
 
 });
 
-///// Route from /post/wanted to /list \\\\\
-router.post('/post/wanted', function (req, res){
+///// Route from /post/Wanted to /list \\\\\
+router.post('/post/Wanted', function (req, res){
 
-  models.wanted.create({
+  models.Wanted.create({
     price: req.body.price,
     itemName: req.body.itemName,
     posterName: req.body.posterName,
@@ -88,9 +88,9 @@ router.get('/itemA/:id', function(req, res) {
   var id = req.params.id;
   var condition = 'id = '+id;
 
-  models.available.findById(id)
+  models.Available.findById(id)
   .then(function(data){
-    res.render('itemA', {available : data});
+    res.render('itemA', {Available : data});
   });
 
 });
@@ -100,7 +100,7 @@ router.get('/itemA/:id', function(req, res) {
 router.put('/itemA/sold/:id', function (req, res) {
   var condition = 'id = ' + req.params.id;
 
-  models.available.updateSold({
+  models.Available.updateSold({
     sold: true
   },
   {
@@ -120,9 +120,9 @@ router.get('/itemW/:id', function(req, res) {
   var id = req.params.id;
   var condition = 'id = '+id;
 
-  models.wanted.findById(id)
+  models.Wanted.findById(id)
   .then(function(data){
-    res.render('itemW', {wanted : data});
+    res.render('itemW', {Wanted : data});
   });
 
 });
@@ -132,7 +132,7 @@ router.get('/itemW/:id', function(req, res) {
 router.put('/itemW/found/:id', function (req, res) {
   var condition = 'id = ' + req.params.id;
 
-  models.wanted.updateFound({
+  models.Wanted.updateFound({
     found: true
   },
   {

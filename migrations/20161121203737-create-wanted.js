@@ -9,16 +9,16 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       mainPic: {
-        type: Sequelize.LONGBLOB
+        type: Sequelize.TEXT
       },
       pic2: {
-        type: Sequelize.LONGBLOB
+        type: Sequelize.TEXT
       },
       pic3: {
-        type: Sequelize.LONGBLOB
+        type: Sequelize.TEXT
       },
       pic4: {
-        type: Sequelize.LONGBLOB
+        type: Sequelize.TEXT
       },
       itemName: {
         type: Sequelize.STRING
