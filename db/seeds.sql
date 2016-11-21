@@ -23,3 +23,4 @@ INSERT INTO available (`mainPic`, `itemName`, `posterName`, `longDescription`, `
 INSERT INTO wanted (`mainPic`, `itemName`, `posterName`, `longDescription`, `shortDescription`, `found`)
  VALUES ("http://thumbs.ebaystatic.com/images/m/mesJPJ0Vbtt5X7F3t3E4dOA/s-l225.jpg", 
  	"Hiking Shoe", "Charles J. Prestia", "919-451-0966", "Leather Hiking Shoe Men's size 10", "0")
+  
