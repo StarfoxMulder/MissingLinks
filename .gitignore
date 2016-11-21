@@ -1,2 +1,4 @@
 node_modules
 schema0.sql
+config.json
+connection.js
