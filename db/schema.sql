@@ -15,8 +15,8 @@ CREATE TABLE available
 	posterName varchar(20) NOT NULL,
 	posterContactNumber varchar(12) NOT NULL,
 	longDescription TEXT,
+	shortDescription TEXT,
 	sold BOOLEAN,
-	datePosted timestamp NOT NULL,
 	PRIMARY KEY (id)
 );
 
@@ -31,8 +31,8 @@ CREATE TABLE wanted
 	posterName varchar(20) NOT NULL,
 	posterContactNumber varchar(12) NOT NULL,
 	longDescription TEXT,
+	shortDescription TEXT,
 	found BOOLEAN,
-	datePosted timestamp NOT NULL,
 	PRIMARY KEY (id)
 );
 
