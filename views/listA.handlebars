@@ -43,7 +43,7 @@
               <div id="itemListDiv">
                   <h2 class="heading">Current Inventory</h2>
                   <ul>
-                    {{#each item}}
+                    {{#each Available}}
                       {{#unless this.sold}}
                         <li>
                           <div class="row">
@@ -59,7 +59,7 @@
                                 <p class="itemshortDescriptionP">{{this.shortDescription}}</p>
                               </div>
                               <div class="col-xs-12">
-                                <form action="items/moreInfo/{{this.id}}?_method=GET" method="GET">
+                                <form action="itemA/{{this.id}}?_method=GET" method="GET">
                                   <button class="btn btn-primary btn-lg priceB listBtn" type="submit">More Info</button>
                                 </form>
                               </div>

@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Courgette|Yantramanav" rel="stylesheet">
     <script type="text/javascript" src="/assets/js/item.js"></script>
   <!--  <link rel="stylesheet" href="assets/css/ML.css" type="text/css" />  -->
-    <link rel="stylesheet" href="assets/css/ML.Mary.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/ML.css" type="text/css" />
     <title>MissingLinks</title>
   </head>
   <body>
@@ -26,13 +26,13 @@
                   <a href="/">Home</a>
               </li>
               <li>
-                  <a href="/list">Available Items</a>
+                  <a href="/listA">Available Items</a>
               </li>
               <li>
-                  <a href="/post">Post an Item</a>
+                  <a href="/listW">Wanted Items</a>
               </li>
-              <li class="disabled" aria-disabled="true">
-                  <a href="#">About</a>
+              <li>
+                  <a href="/post">Post or Request an Item</a>
               </li>
               <li class="disabled" aria-disabled="true">
                   <a href="#">Donate</a>
@@ -43,68 +43,28 @@
           </ul>
       </div>
 
-      <main id="page-content-wrapper">
+      <main id="page-content-wrapper" class="landingPg">
         <div class="container-fluid">
           <header>
-            <p><span style="font-size: 85px">M</span>ISSING <span style="font-size: 85px">L</span>INKS</p>
+            <p><span style="font-size: 86px">M</span>ISSING <span style="font-size: 85px">L</span>INKS</p>
             <!-- <hr id="undLine" style="height:30px"> -->
           </header>
 
-<!--            <div class="col-xs-4" id="picCol">
-              <div class="row">
-                <div class="col-xs-10 offset-xs-1" id="mainPicDiv">
-                  {{this.mainPic}}
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xs-2" id="pic2Div">
-                  {{this.pic2}}
-                </div>
-                <div class="col-xs-2" id="pic3Div">
-                  {{this.pic3}}
-                </div>
-                <div class="col-xs-2" id="pic4Div">
-                  {{this.pic4}}
-                </div>
-              </div>
+          <div class="row" id="subHeader">
+            <div class="col-xs-10 col-xs-offset-1" id="introDiv">
+              <h2>
+                Something for Everyone!
+              </h2>
+              <h3>
+                What do you need?   What do you have?
+              </h3>
+              <h3> <!-- {{this.longDescription}} -->
+                Welcome to Missing Links!   This is the place where you can find whatever you are missing to complete a set.   Could be an earring, a glove, a shoe, you name it.   We bring together people who are seeking items with those who have them to offer.   Click on any of the buttons on the left-hand side-bar to get started!
+              </h3>
             </div>
-            <!-- end picCol -->
-            <div class="row" id="subHeader">
-              <div class="col-xs-10 offset-xs-1">
-                <div class="jumbotron" id="jumbo">
-                  <h2 id="itemNameH"> <!-- {{this.itemName}} -->
-                  Something for Everyone!
-                  </h2>
-                  <h3 id="posterNameH"> <!-- {{this.posterName}} -->
-                  What do you need?   What do you have?
-                  </h3>
-                  <p class="lead" id="longDescriptionP"> <!-- {{this.longDescription}} -->
-                    Welcome to Missing Links!   This is the place where you can find whatever you are missing to complete a set.   Could be an earring, a glove, a shoe, you name it.   We bring together people who are seeking items with those who have them to offer.   Click on any of the buttons on the left-hand side-bar to get started!
-                  </p>
-  <!--                <p class="lead">
-                    <a class="btn btn-primary btn-lg" href="#" role="button" id="purchase">Purchase</a>
-                  </p>  -->
-                  <!-- <hr class="my-2"> -->
-                </div>
-              </div>
+          </div> <!-- end subheader -->
 
-      <!--   <div class="row">
-                <div class="col-xs-10 offset-xs-1">
-                  <ul>
-                    {{#each comment}}
-                      <li>
-                        <h3 id="posterNameH"> {{this.commentPoster}} </h3>
-                        <hr style="color:gray">
-                        <h4> {{this.commentText}} </h4>
-                      </li>
-                    {{/each}}
-                  </ul>
-                </div>
-              </div>   ///// This section would populate the comments section if we want it -->
-
-            </div> <!-- end subheader -->
-
-          </div> <!-- end main container row -->
+        </div> <!-- end main container row -->
       </main>
     </div>
   </body>

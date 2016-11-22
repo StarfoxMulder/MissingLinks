@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Jomhuria|Limelight|Oleo+Script|Sansita+One" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Yantramanav" rel="stylesheet">
+    <script type="text/javascript" src="/assets/js/item.js"></script>
+    <link rel="stylesheet" href="assets/css/ML.css" type="text/css" />
+    <title>MissingLinks</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <div id="sidebar-wrapper">
+          <ul class="sidebar-nav">
+              <li class="sidebar-brand">
+                  <a href="/">
+                      MissingLinks
+                  </a>
+              </li>
+              <li>
+                  <a href="/">Home</a>
+              </li>
+              <li>
+                  <a href="/list">Available Items</a>
+              </li>
+              <li>
+                  <a href="/post">Post an Item</a>
+              </li>
+              <li class="disabled" aria-disabled="true">
+                  <a href="#">About</a>
+              </li>
+              <li class="disabled" aria-disabled="true">
+                  <a href="#">Donate</a>
+              </li>
+              <li class="disabled" aria-disabled="true">
+                  <a href="#">Contact</a>
+              </li>
+          </ul>
+      </div>
+
+      <main id="page-content-wrapper" class="listPg">
+        <div class="container-fluid">
+          <header>
+            <p class="listHeader"><span style="font-size: 40px">M</span>ISSING <span style="font-size: 40px">L</span>INKS</p>
+            <!-- <hr id="undLine" style="height:30px"> -->
+          </header>
+
+          <div class="row">
+
+            <div class="col-xs-12 ">
+
+              <div class="col-xs-10">
+                  <div id="itemListDiv">
+                      <h2 class="heading">Current Inventory</h2>
+                      <ul>
+                        {{#each item}}
+                          {{#unless this.sold}}
+                            <li>
+                              <div class="row">
+                                <div class="col-xs-3">
+                                  <img src="
+                                  {{this.mainPic}}">
+                                </div>
+                                <div clss="col-xs-9">
+                                  <div class="col-xs-12">
+                                    <p class="itemPriceP">{{this.price}}</p>
+                                  </div>
+                                  <div class="col-xs-10 offset-xs-1">
+                                    <p class="itemshortDescriptionP">{{this.shortDescription}}</p>
+                                  </div>
+                                  <div class="col-xs-12">
+                                    <form action="items/moreInfo/{{this.id}}?_method=GET" method="GET">
+                                      <button class="btn btn-primary btn-lg priceB listBtn" type="submit">More Info</button>
+                                    </form>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                          {{/unless}}
+                        {{/each}}
+                      </ul>
+                  </div>
+              </div> <!-- end container for item results -->
+            </div>
+          </div>
+
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

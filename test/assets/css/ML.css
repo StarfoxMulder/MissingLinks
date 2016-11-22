@@ -1,5 +1,9 @@
 body {
-    overflow-x: hidden;
+/*    overflow-x: hidden;*/
+    height: 100%;
+ }
+ html, body, main {
+    height: 100%;
  }
 
 /* Toggle Styles */
@@ -10,6 +14,7 @@ body {
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+    height: 100%;
 }
 
 #wrapper.toggled {
@@ -34,6 +39,7 @@ body {
 #wrapper.toggled #sidebar-wrapper {
     width: 250px;
     background-color: #D3FFE6;
+    height: 100%;
 }
 
 #page-content-wrapper {
@@ -41,10 +47,7 @@ body {
     position: absolute;
     padding: 15px;
     padding-right: 45px;
-    background-image: url('../img/natBack1.jpg');
-    /* background-image: url('../img/ray_troll.jpg'); */
-    background-size: cover;
-    background-repeat: no-repeat;
+    height: 100%;
 }
 #subHeader {
 }
@@ -52,6 +55,7 @@ body {
 #wrapper.toggled #page-content-wrapper {
     position: absolute;
     margin-right: -250px;
+    height: 100%;
 }
 
 /* Sidebar Styles */
@@ -109,7 +113,7 @@ body {
 
 header {
     font-family: 'Courgette', cursive;
-    font-size: 80px;
+    font-size: 73px;
     background-color: #fff;
     padding-left: 12%;
     border-radius: 10px;
@@ -122,18 +126,56 @@ header {
     height: 20px;
 }
 
+/*  Landing PAge  */
+.landingPg {
+    background: #92dec8;
+    background-image: url("../img/zenbg-1.png"), url("../img/zenbg-2.png");
+    background-repeat: repeat-x, repeat;
+    height: 100%;
+}
+#subHeader {
+}
+
+#introDiv{
+    background-color: #D3FFE6;
+    font-family: 'Yantramanav', sans-serif;
+    border-radius: 15px;
+    padding: 5%;
+}
+#introDiv > h2 {
+
+}
+#introDiv > h3 {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+#introDiv > p {
+
+}
+
 
 /*  Item Page Styling  */
+.itemPg {
+    background: #7d8985;
+    background-image: url("../img/zenbg-3.png"), url("../img/zenbg-4.png");
+    background-repeat: repeat-x, repeat;
+    height: 100%;
+}
+.itemHeader {
+    font-size: 33px;
+}
 #jumbo {
     margin-right: 15%;
     background-color: #D3FFE6;
     font-family: 'Yantramanav', sans-serif;
+    padding: 2%;
 }
 
 #itemNameH, #posterNameH, #longDescriptionP {
     background-color: #fff;
     border-radius: 10px;
     padding: 2%;
+    border: 1px solid #697F73;
 }
 #itemNameH {
 
@@ -172,12 +214,44 @@ header {
     margin-bottom: 4%;
 }
 
-#price {
-    margin-left: 5%;
+.priceB {
+    margin-left: 6%;
 }
 #purchase {
-    background-color: #ggg;
+    background-color: #697F73;
    /* background-color: #58CCCA;*/
+}
+
+/*  List Page  */
+.listPg {
+    background: #7d8985;
+    background-image: url("../img/zenbg-3.png"), url("../img/zenbg-4.png");
+    background-repeat: repeat-x, repeat;
+    height: 100%;
+}
+.listHeader {
+    font-size: 33px;
+}
+#itemListDiv {
+    font-family: 'Yantramanav', sans-serif;
+    background: #D3FFFF;
+    border-radius: 10px;
+    padding: 2%;
+}
+.listBtn {
+
+}
+
+
+
+/*  Post Page  */
+.postPg {
+    background: #7d8985;
+    background-image: url("../img/zenbg-3.png"), url("../img/zenbg-4.png");
+    background-repeat: repeat-x, repeat;
+    height: 100%;
+}
+#postCol {
 }
 
 

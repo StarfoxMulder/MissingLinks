@@ -40,11 +40,11 @@
         <div class="col-xs-12 ">
 
           <div class="col-xs-10">
-              <div id="itemListDiv">
-                  <h2 class="heading">Current Inventory</h2>
+              <div id="wantedListDiv">
+                  <h2 class="heading">Currently Wanted Items</h2>
                   <ul>
-                    {{#each item}}
-                      {{#unless this.sold}}
+                    {{#each Wanted}}
+                      {{#unless this.found}}
                         <li>
                           <div class="row">
                             <div class="col-xs-3">
@@ -52,14 +52,11 @@
                               {{this.mainPic}}">
                             </div>
                             <div clss="col-xs-9">
-                              <div class="col-xs-12">
-                                <p class="itemPriceP">{{this.price}}</p>
-                              </div>
                               <div class="col-xs-10 offset-xs-1">
                                 <p class="itemshortDescriptionP">{{this.shortDescription}}</p>
                               </div>
                               <div class="col-xs-12">
-                                <form action="items/moreInfo/{{this.id}}?_method=GET" method="GET">
+                                <form action="itemW/{{this.id}}?_method=GET" method="GET">
                                   <button class="btn btn-primary btn-lg priceB listBtn" type="submit">More Info</button>
                                 </form>
                               </div>

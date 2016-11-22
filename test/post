@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Jomhuria|Limelight|Oleo+Script|Sansita+One" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Yantramanav" rel="stylesheet">
+    <script type="text/javascript" src="/assets/js/item.js"></script>
+    <link rel="stylesheet" href="assets/css/ML.css" type="text/css" />
+    <title>MissingLinks</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <div id="sidebar-wrapper">
+          <ul class="sidebar-nav">
+              <li class="sidebar-brand">
+                  <a href="/">
+                      MissingLinks
+                  </a>
+              </li>
+              <li>
+                  <a href="/">Home</a>
+              </li>
+              <li>
+                  <a href="/list">Available Items</a>
+              </li>
+              <li>
+                  <a href="/post">Post an Item</a>
+              </li>
+              <li class="disabled" aria-disabled="true">
+                  <a href="#">About</a>
+              </li>
+              <li class="disabled" aria-disabled="true">
+                  <a href="#">Donate</a>
+              </li>
+              <li class="disabled" aria-disabled="true">
+                  <a href="#">Contact</a>
+              </li>
+          </ul>
+      </div>
+
+      <main id="page-content-wrapper" class="itemPg">
+        <div class="container-fluid">
+          <header>
+            <p class="itemHeader"><span style="font-size: 40px">M</span>ISSING <span style="font-size: 40px">L</span>INKS</p>
+            <!-- <hr id="undLine" style="height:30px"> -->
+          </header>
+
+          <div class="row" id="subHeader">
+
+            <div class="col-xs-8" id="postCol">
+              <div class="row">
+                <div class="jumbotron" id="jumbo">
+                  <form>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="availablePostTog" value="">
+                        I am looking to sell this item
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="wantedPostTog" value="" checked>
+                        I am looking to acquire this item
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="bothPostTog" value="" disabled>
+                        Whichever happens first!
+                      </label>
+                    </div>
+                    <div class="form-group">
+                      <label for="posterNameI">Poster Name</label>
+                      <input type="name" class="form-control" id="posterNameI" placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                      <label for="itemNameI">Item Name</label>
+                      <input type="item" class="form-control" id="itemNameI" placeholder="Item Name">
+                    </div>
+                    <div class="form-group">
+                      <label for="shortDescI">Brief Description</label>
+                      <textarea class="form-control" rows="3" id="shortDescI" placeholder="Please provide a brief description of your item"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="longDescI">Full Description</label>
+                      <textarea class="form-control" rows="3" id="longDescI" placeholder="If you would like to provide additional details about your item, please provide them here"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="mainPicI">Item Image</label>
+                      <input type="item" class="form-control" id="mainPicI" placeholder="Insert image URL here">
+                    </div>
+                    <div class="form-group">
+                      <label for="pic2I">Item Image</label>
+                      <input type="item" class="form-control" id="pic2I" placeholder="Insert image URL here">
+                    </div>
+                    <div class="form-group">
+                      <label for="pic3I">Item Image</label>
+                      <input type="item" class="form-control" id="pic3I" placeholder="Insert image URL here">
+                    </div>
+                    <div class="form-group">
+                      <label for="pic4I">Item Image</label>
+                      <input type="item" class="form-control" id="pic4I" placeholder="Insert image URL here">
+                    </div>
+                    <p class="lead">
+                      <a class="btn btn-primary btn-lg" href="#" role="button" id="postItem">Submit</a>
+                    </p>
+                  </form>
+                </div>
+              </div>
+
+            </div> <!-- end postCol -->
+
+          </div> <!-- end main container row -->
+
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
