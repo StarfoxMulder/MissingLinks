@@ -40,22 +40,22 @@
         <div class="col-xs-10 col-xs-offset-2" id="postCol">
           <div class="row">
             <div class="jumbotron" id="jumbo">
-              <form>
+              <form name="itemForm" onsubmit="return onsubmitForm();" method="POST">
                 <div class="radio">
                   <label>
-                    <input type="radio" name="optionsRadios" id="availablePostTog" value="">
+                    <input type="radio" name="optionsRadios" id="availablePostTog" value="sell" onclick="document.pressed=this.value">
                     I am looking to sell this item
                   </label>
                 </div>
                 <div class="radio">
                   <label>
-                    <input type="radio" name="optionsRadios" id="wantedPostTog" value="" checked>
+                    <input type="radio" name="optionsRadios" id="wantedPostTog" value="want" onclick="document.pressed=this.value" checked>
                     I am looking to acquire this item
                   </label>
                 </div>
                 <div class="radio">
                   <label>
-                    <input type="radio" name="optionsRadios" id="bothPostTog" value="" disabled>
+                    <input type="radio" name="optionsRadios" id="bothPostTog" value="both" onclick="document.pressed=this.value" disabled>
                     Whichever happens first!
                   </label>
                 </div>
