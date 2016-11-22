@@ -36,7 +36,6 @@
     "express-handlebars": "^3.0.0",
     "handlebars": "^4.0.6",
     "method-override": "^2.3.6",
-    "multer": "^1.2.0",
     "mysql": "^2.11.1",
     "node-exec-promise": "^0.1.1",
     "path": "^0.12.7",

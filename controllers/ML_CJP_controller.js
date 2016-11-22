@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var models = require('../models');
-var multer = require('multer');
+// var multer = require('multer');
 
 ///// Route to Landing Page \\\\\
 router.get('/', function (req, res) {
