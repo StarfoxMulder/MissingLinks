@@ -1,5 +1,9 @@
 body {
-    overflow-x: hidden;
+/*    overflow-x: hidden;*/
+    height: 100%;
+ }
+ html, body, main {
+    height: 100%;
  }
 
 /* Toggle Styles */
@@ -10,6 +14,7 @@ body {
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+    height: 100%;
 }
 
 #wrapper.toggled {
@@ -24,7 +29,7 @@ body {
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    background-color: #87FFB9;
+    background-color: #D3FFE6;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -33,7 +38,8 @@ body {
 
 #wrapper.toggled #sidebar-wrapper {
     width: 250px;
-    background-color: #87FFB9;
+    background-color: #D3FFE6;
+    height: 100%;
 }
 
 #page-content-wrapper {
@@ -41,9 +47,7 @@ body {
     position: absolute;
     padding: 15px;
     padding-right: 45px;
-    background-image: url('../img/natBack1.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+    height: 100%;
 }
 #subHeader {
 }
@@ -51,6 +55,7 @@ body {
 #wrapper.toggled #page-content-wrapper {
     position: absolute;
     margin-right: -250px;
+    height: 100%;
 }
 
 /* Sidebar Styles */
@@ -62,7 +67,7 @@ body {
     margin: 0;
     padding: 0;
     list-style: none;
-    background-color: #87FFB9;
+    background-color: #D3FFE6;
 }
 
 .sidebar-nav li {
@@ -75,7 +80,7 @@ body {
     font-size: 18px;
     display: block;
     text-decoration: none;
-    color: #fff;
+    color: #697F73;
 
 }
 
@@ -97,7 +102,7 @@ body {
 }
 
 .sidebar-nav > .sidebar-brand a {
-    color: #fff;
+    color: #697F73;
     font-family: 'Courgette', cursive;
 }
 
@@ -108,30 +113,69 @@ body {
 
 header {
     font-family: 'Courgette', cursive;
-    font-size: 85px;
+    font-size: 73px;
     background-color: #fff;
-    padding-left: 15%;
+    padding-left: 12%;
     border-radius: 10px;
     opacity: 0.7;
     margin-bottom: 5%;
+    letter-spacing: 3px;
 }
 
 #undLine {
     height: 20px;
 }
 
+/*  Landing PAge  */
+.landingPg {
+    background: #92dec8;
+    background-image: url("../img/zenbg-1.png"), url("../img/zenbg-2.png");
+    background-repeat: repeat-x, repeat;
+    height: 100%;
+}
+#subHeader {
+}
+
+#introDiv{
+    background-color: #D3FFE6;
+    font-family: 'Yantramanav', sans-serif;
+    border-radius: 15px;
+    padding: 5%;
+}
+#introDiv > h2 {
+
+}
+#introDiv > h3 {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+#introDiv > p {
+
+}
+
 
 /*  Item Page Styling  */
+.itemPg {
+    background: #7d8985;
+    background-image: url("../img/zenbg-3.png"), url("../img/zenbg-4.png");
+    background-repeat: repeat-x, repeat;
+    height: 100%;
+}
+.itemHeader {
+    font-size: 33px;
+}
 #jumbo {
     margin-right: 15%;
     background-color: #D3FFE6;
     font-family: 'Yantramanav', sans-serif;
+    padding: 2%;
 }
 
 #itemNameH, #posterNameH, #longDescriptionP {
     background-color: #fff;
     border-radius: 10px;
     padding: 2%;
+    border: 1px solid #697F73;
 }
 #itemNameH {
 
@@ -147,10 +191,14 @@ header {
 }
 
 #mainPicDiv {
-    border: solid 2px #87FFB9;
+    border: solid 2px #D3FFE6;
     border-radius: 15px;
     height: 180px;
     width: 180px;
+    margin-left: 15%;
+}
+#pic2Div {
+    margin-left: 15%;
 }
 
 #pic3Div {
@@ -158,7 +206,7 @@ header {
     margin-right: 4%;
 }
 #pic2Div, #pic3Div, #pic4Div {
-    border: solid 2px #87FFB9;
+    border: solid 2px #D3FFE6;
     border-radius: 15px;
     height: 80px;
     width: 80px;
@@ -166,9 +214,44 @@ header {
     margin-bottom: 4%;
 }
 
+.priceB {
+    margin-left: 6%;
+}
 #purchase {
-    margin: auto;
-    background-color: #58CCCA;
+    background-color: #697F73;
+   /* background-color: #58CCCA;*/
+}
+
+/*  List Page  */
+.listPg {
+    background: #7d8985;
+    background-image: url("../img/zenbg-3.png"), url("../img/zenbg-4.png");
+    background-repeat: repeat-x, repeat;
+    height: 100%;
+}
+.listHeader {
+    font-size: 33px;
+}
+#itemListDiv {
+    font-family: 'Yantramanav', sans-serif;
+    background: #D3FFFF;
+    border-radius: 10px;
+    padding: 2%;
+}
+.listBtn {
+
+}
+
+
+
+/*  Post Page  */
+.postPg {
+    background: #7d8985;
+    background-image: url("../img/zenbg-3.png"), url("../img/zenbg-4.png");
+    background-repeat: repeat-x, repeat;
+    height: 100%;
+}
+#postCol {
 }
 
 
